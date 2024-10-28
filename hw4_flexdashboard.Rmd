@@ -1,0 +1,53 @@
+---
+title: "hw4_flexdashboard"
+author: "Yuechu Hu"
+date: "2024-10-28"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(p8105.datasets)
+library(plotly)
+library(flexdashboard)
+library(tidyverse)
+```
+
+
+
+
+
+
+
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+
+```
+
+### Chart C
+
+```{r}
+
+```
+
+
+
+
