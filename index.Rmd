@@ -1,7 +1,18 @@
 ---
-title: "Holy cow!"
+title: "Introductory"
 ---
 
-### I have a webpage!
 
-And I can put all kinds of stuff on it!
+
+
+
+
+Hi everyone! My name is Yuechu Hu, and I'm currently pursuing my MS in Biostatistics at Columbia University. I have a passion for cooking and love spending my free time listening to music. I'm excited to connect with others who share similar interests and to dive deeper into the world of biostatistics!
+
+
+
+![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+
+
+
+
