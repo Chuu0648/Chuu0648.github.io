@@ -74,10 +74,16 @@ ny_noaa_clean %>%
          yaxis = list(title = "Average Snowfall (mm)"))
 ```
 
-### Chart C
+### Chart C: Boxplot
 
 ```{r}
-
+ny_noaa_clean %>%
+  plot_ly(x = ~factor(year), 
+          y = ~tmax, 
+          type = 'box') %>%
+  layout(title = "Boxplot of Max Temperature by Year",
+         xaxis = list(title = "Year"),
+         yaxis = list(title = "Maximum Temperature (C)"))
 ```
 
 
