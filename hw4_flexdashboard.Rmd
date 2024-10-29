@@ -6,6 +6,7 @@ output:
   flexdashboard::flex_dashboard:
     orientation: columns
     vertical_layout: fill
+    source: embed
 ---
 
 ```{r setup, include=FALSE}
@@ -17,12 +18,12 @@ library(dplyr)
 ```
 
 
-```{r}
+```{r, include=FALSE}
 ny_noaa = read_csv("./data/nynoaadat.csv")
 ```
 
 
-```{r}
+```{r, include=FALSE}
 ny_noaa_clean = ny_noaa %>%
   janitor::clean_names() %>%
   mutate(
@@ -42,7 +43,7 @@ Column {data-width=650}
 
 ### Chart A: Scatterplot
 
-```{r}
+```{r, echo = FALSE}
 ny_noaa_clean %>%
   filter(year == 2000) %>%
   plot_ly(
@@ -62,7 +63,7 @@ Column {data-width=350}
 
 ### Chart B: Boxplot
 
-```{r}
+```{r, echo = FALSE}
 ny_noaa_clean %>%
   group_by(year) %>%
   summarize(avg_snow = mean(snow, na.rm = TRUE)) %>%
@@ -76,7 +77,7 @@ ny_noaa_clean %>%
 
 ### Chart C: Boxplot
 
-```{r}
+```{r, echo = FALSE}
 ny_noaa_clean %>%
   plot_ly(x = ~factor(year), 
           y = ~tmax, 
