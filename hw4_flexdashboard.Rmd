@@ -13,6 +13,7 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 library(plotly)
 library(flexdashboard)
 library(tidyverse)
+library(dplyr)
 ```
 
 
@@ -42,7 +43,18 @@ Column {data-width=650}
 ### Chart A
 
 ```{r}
-
+ny_noaa_clean %>%
+  filter(year == 2000) %>%
+  plot_ly(
+    x = ~tmax,
+    y = ~prcp,
+    type = "scatter", 
+    mode = "markers",
+    alpha = 0.5
+  ) %>%
+  layout(title = "Scatterplot of Precipitation vs Max Temperature",
+         xaxis = list(title = "Maximum Temperature (C)"),
+         yaxis = list(title = "Precipitation (mm)"))
 ```
 
 Column {data-width=350}
