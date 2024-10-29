@@ -10,15 +10,27 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
-library(p8105.datasets)
 library(plotly)
 library(flexdashboard)
 library(tidyverse)
 ```
 
 
+```{r}
+ny_noaa = read_csv("./data/nynoaadat.csv")
+```
 
 
+```{r}
+ny_noaa_clean = ny_noaa %>%
+  janitor::clean_names() %>%
+  mutate(
+    year = year(date),
+    tmax = tmax / 10,    
+    tmin = tmin / 10, 
+    prcp = prcp / 10
+  ) 
+```
 
 
 
